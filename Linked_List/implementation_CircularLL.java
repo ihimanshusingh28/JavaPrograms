@@ -2,7 +2,7 @@ package Linked_List;
 class CircularLL{
     Node head ;
 
-    class Node{
+class Node{
         int data;
         Node next;
         Node prev;
