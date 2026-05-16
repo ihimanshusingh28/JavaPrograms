@@ -56,20 +56,22 @@
 //     }
 // }
 public class test{
-    public static void main(String[] args) {
-        int arr[]={2,7,9,3,1};
-        int n= arr.length;
-        int sum1=0;
-
-        for(int i=0;i<n;i+=2){
-            sum1+=arr[i];
+    public int removeDuplicates(int[] nums) {
+        int i=0;
+        for(int elements : nums){
+            if(i==0 || i==1 || nums[i-2]!=elements){
+                nums[i]= elements;
+                i++;
+            }
         }
-        int sum2=0;
-        for(int i=1;i<n;i+=2){
-            sum2+=arr[i];
+        return i;
     }
-    int Max= Math.max(sum1, sum2);
-    System.out.println(Max);
+    public static void main(String[] args) {
+        int arr[]={1,1,1,2,2,3};
+        int n= arr.length;
+        for(int j : arr){
+            
+        }
 
 }
 }
