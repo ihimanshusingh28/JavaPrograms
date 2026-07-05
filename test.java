@@ -55,29 +55,53 @@
 //         }
 //     }
 // }
-public class test{
-    public int removeDuplicates(int[] nums) {
-        int i=0;
-        for(int elements : nums){
-            if(i==0 || i==1 || nums[i-2]!=elements){
-                nums[i]= elements;
-                i++;
-            }
-        }
-        return i;
-    }
-    public static void main(String[] args) {
-        int arr[]={1,1,1,2,2,3};
-        int n= arr.length;
-        for(int j : arr){
+// public class test{
+//     public int removeDuplicates(int[] nums) {
+//         int i=0;
+//         for(int elements : nums){
+//             if(i==0 || i==1 || nums[i-2]!=elements){
+//                 nums[i]= elements;
+//                 i++;
+//             }
+//         }
+//         return i;
+//     }
+//     public static void main(String[] args) {
+//         int arr[]={1,1,1,2,2,3};
+//         int n= arr.length;
+//         for(int j : arr){
             
-        }
+//         }
 
+// }
+// }
+
+
+
+
+//AN Example of method overloading and overriding in java
+
+class test{
+    public int add(int a , int b){
+        return a+b;
+    }
 }
+class test1 extends test{
+    
+    public int add(int a , int b, int c){
+        int d = a*b+c;
+        return d;
+    }
+    public int add(int a , int b){
+        return a-b;
+    }
+
+    public static void main(String[] args) {
+        test t1= new test();
+        test t2= new test();
+        test1 t3= new test1();
+        System.out.println(t1.add(10, 20));
+        System.out.println(t3.add(11, 20));
+        System.out.println(t3.add(10, 20, 30));
+    }
 }
-
-
-
-
-//A med-Inventory app to be build
-//
